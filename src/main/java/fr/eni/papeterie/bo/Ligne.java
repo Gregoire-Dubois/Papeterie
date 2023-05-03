@@ -18,6 +18,18 @@ public class Ligne {
         return this.article;
     }
 
+    public int getQte(){
+        return qte;
+    }
+
+    public float getPrix(){
+        return article.getPrixUnitaire();
+    }
+
+    public void setArticle(Article article){
+        this.article = article;
+    }
+
     public void setQte(int qte){
         this.qte = qte;
     }

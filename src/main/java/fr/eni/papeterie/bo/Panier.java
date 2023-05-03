@@ -1,5 +1,6 @@
 package fr.eni.papeterie.bo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Panier {
@@ -7,7 +8,7 @@ public class Panier {
     private List<Ligne> lignesPanier;
 
     public Panier(){
-
+        lignesPanier = new ArrayList<Ligne>();
     }
 
     public Panier(float montant) {
@@ -16,6 +17,11 @@ public class Panier {
 
     public List<Ligne> getLignesPanier() {
         return lignesPanier;
+    }
+
+    public float getMontant(){
+        return montant;
+
     }
 
     public void addLigne(Article article, int qte){
@@ -27,9 +33,9 @@ public class Panier {
         return lignesPanier.get(index);
     }
 
+
     public void updateLigne(int index, int newQte){
         this.getLigne(index).setQte(newQte);
-
     }
 
     public void removeLigne(int index){
