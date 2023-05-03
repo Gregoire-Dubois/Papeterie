@@ -116,8 +116,5 @@ public class AppliTestBO {
         for (Article article : articles) {
             System.out.println(article.toString());
         }
-
     }
-
-
 }
